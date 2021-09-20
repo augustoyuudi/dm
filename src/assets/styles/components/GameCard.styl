@@ -1,0 +1,41 @@
+.base-card
+  display flex
+  flex-wrap wrap
+  justify-content center
+  box-shadow 0 $size.quark $size.quark 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08)
+  border-radius $size.micro
+  color #2F2724
+  width 120px
+  overflow hidden
+
+  @media screen and (min-width: $breakpoints.md)
+    width 230px
+
+  @media screen and (min-width: $breakpoints.lg)
+    width 300px
+
+  &__content
+    flex-basis 100%
+    padding $size.micro $size.little $size.nano
+    font-size $font.small
+    line-height 18px
+    overflow hidden
+
+  &__title
+    font-weight 400
+    white-space nowrap
+    text-overflow ellipsis
+    overflow hidden
+
+  &__subtitle
+    font-weight 400
+    color #70757a
+
+  &__image-container
+    width 100%
+    max-height 280px
+    overflow hidden
+
+  &__image
+    object-fit cover
+    width 100%
