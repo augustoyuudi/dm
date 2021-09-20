@@ -7,7 +7,7 @@
       <router-link
         v-for='game in games'
         :key='game.id'
-        :to='{name: "game", params: { id: game.id }}'
+        :to='{name: "game", params: { gameName: game.name }}'
         class='home__card'
       >
         <game-card
@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import Http from '@/services/http';
+import GamesAPI from '@/services/http/Games';
 import GameCard from '@/components/GameCard.vue';
 import ScrollObserver from '@/components/shared/ScrollObserver.vue';
 
@@ -64,7 +64,7 @@ export default {
       const promises = [];
 
       for (let i = initialIndex; i <= lastIndex; i += 1) {
-        promises.push(Http.get(`/version/${i}`));
+        promises.push(GamesAPI.getByID(i));
       }
 
       return promises;
