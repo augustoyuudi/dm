@@ -21,6 +21,8 @@
 
 <script>
 export default {
+  name: 'GameCard',
+
   props: {
     game: {
       type: Object,
