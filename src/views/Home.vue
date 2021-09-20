@@ -36,6 +36,11 @@ export default {
 
   created() {
     this.fetchGames();
+    this.setReloadScrollBehavior();
+  },
+
+  destroyed() {
+    window.removeEventListener('beforeunload', this.scrollViewToTop);
   },
 
   computed: {
@@ -76,6 +81,12 @@ export default {
         ...newGames,
       ];
       this.canFetchNewGames = !(newGames.length !== rawGames.length);
+    },
+    setReloadScrollBehavior() {
+      window.addEventListener('beforeunload', this.scrollViewToTop);
+    },
+    scrollViewToTop() {
+      window.scrollTo(0, 0);
     },
   },
 };
