@@ -4,7 +4,7 @@ import router from './router';
 import store from './store';
 
 // Shared styles
-import './assets/styles/shared/index.styl';
+import './assets/styles/style.styl';
 
 Vue.config.productionTip = false;
 
