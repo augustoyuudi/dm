@@ -1,0 +1,48 @@
+$ball-width = 25px
+$ball-height = 25px
+$bounce_height = 35px
+
+.loader
+  position absolute
+  top 50%
+  left 50%
+  transform translate(-50%, -50%)
+
+  &__text
+    color #2F2724
+    display inline-block
+    margin-left 10px
+    font-size $font.large
+
+  &__ball
+    position relative
+    display inline-block
+    height 40px
+    width $ball-width
+
+    &:before
+      position absolute
+      content ''
+      display block
+      top 0
+      width $ball-width
+      height $ball-height
+      border-radius 50%
+      background-color #2F2724
+      transform-origin 50%
+      animation bounce 500ms alternate infinite ease
+
+@keyframes bounce
+  0%
+    top $bounce_height
+    height 5px
+    border-radius 60px 60px 20px 20px
+    transform scaleX(2)
+
+  35%
+    height $height
+    border-radius 50%
+    transform scaleX(1)
+
+  100%
+    top 0
