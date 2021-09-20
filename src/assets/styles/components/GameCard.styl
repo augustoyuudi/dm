@@ -1,4 +1,4 @@
-.base-card
+.game-card
   display flex
   flex-wrap wrap
   justify-content center
@@ -7,12 +7,13 @@
   color #2F2724
   width 120px
   overflow hidden
+  zoom-in()
 
   @media screen and (min-width: $breakpoints.md)
     width 230px
 
   @media screen and (min-width: $breakpoints.lg)
-    width 300px
+    width 280px
 
   &__content
     flex-basis 100%
