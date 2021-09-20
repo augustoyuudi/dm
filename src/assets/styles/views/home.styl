@@ -1,0 +1,19 @@
+@import './view.styl'
+
+.home
+  &__cards
+    display flex
+    flex-wrap wrap
+    justify-content center
+    gap 1rem
+    max-width 950px
+    overflow auto
+    margin 0 auto
+    padding .5rem 0
+
+    &::-webkit-scrollbar
+      display none
+
+  &__card
+    align-self flex-start
+    text-decoration none
