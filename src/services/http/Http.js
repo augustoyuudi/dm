@@ -9,13 +9,13 @@ class Http {
         'Content-Type': 'application/json',
       },
     });
-  }
-
-  get(url) {
-    return this.http.get(url);
+    this.rawHttp = axios.create({
+      headers: {
+        accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+    });
   }
 }
 
-const http = new Http();
-
-export default http;
+export default Http;
