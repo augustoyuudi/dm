@@ -1,20 +1,20 @@
 <template>
-  <div class='base-card'>
+  <div class='game-card'>
     <picture
-      class="base-card__image-container"
+      class="game-card__image-container"
     >
       <source
         srcset='@/assets/images/game-cover.jpeg'
       >
       <img
-        class="base-card__image"
+        class="game-card__image"
         src='@/assets/images/game-cover.jpeg'
         :alt='`Cover of pokemon game called ${game.name}`'
       >
     </picture>
-    <aside class="base-card__content">
-      <h4 class="base-card__title">Pokémon <br>{{ capitalizedGameName }}</h4>
-      <h5 class="base-card__subtitle">#{{ game.id }}</h5>
+    <aside class="game-card__content">
+      <h4 class="game-card__title">Pokémon <br>{{ capitalizedGameName }}</h4>
+      <h5 class="game-card__subtitle">#{{ game.id }}</h5>
     </aside>
   </div>
 </template>
