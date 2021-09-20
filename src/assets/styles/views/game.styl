@@ -1,0 +1,29 @@
+.game
+  padding 1rem
+
+  &__cover
+    display flex
+    justify-content center
+    margin-bottom $size.little
+
+  &__details
+    max-width 640px
+    margin 0 auto
+
+    &__border
+      position relative
+      z-index 1
+      border 21px solid
+      border-image url('https://legends.pokemon.com/assets/border-paper.png') 42 repeat
+
+    &__background
+      background url('https://legends.pokemon.com/assets/bg-paper.jpg') repeat center top
+      padding 1rem
+
+      > p
+        margin-bottom $size.micro
+
+    &__pokemons
+      > p:not(:last-child)
+        margin-left $size.tiny
+        margin-bottom $size.nano
