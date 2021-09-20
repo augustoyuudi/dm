@@ -1,7 +1,7 @@
 @import './view.styl'
 
 .home
-  padding .5rem 1rem
+  padding 1rem
 
   &__cards
     display flex
@@ -12,6 +12,10 @@
     overflow auto
     margin 0 auto
     padding .5rem 0
+
+    @media screen and (min-width $breakpoints.md)
+      gap 1.5rem
+      padding 2rem 0
 
     &::-webkit-scrollbar
       display none
