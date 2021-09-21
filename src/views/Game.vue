@@ -9,10 +9,10 @@
       <section v-if="game" class='game__details'>
         <div class="game__details__border">
           <div class="game__details__background">
-            <p>Name: {{ game.name }} {{ game.names[0].name }}</p>
-            <p>Generation: {{ game.generation.name }}</p>
-            <p>Regions: {{ game.regions[0].name }}</p>
-            <p>Pokedexes: {{ game.pokedexes[0].name }}</p>
+            <p>Name: {{ game.name }} {{ alternativeName }}</p>
+            <p>Generation: {{ generationName }}</p>
+            <p>Regions: {{ regions }}</p>
+            <p>Pokedexes: {{ pokedexes }}</p>
             <details class="game__details__pokemons">
               <summary>Available pokémons</summary>
               <p
@@ -50,6 +50,22 @@ export default {
     this.fetchAllGameData();
   },
 
+  computed: {
+    alternativeName() {
+      const name = this?.game?.names[0];
+      return name?.name || '';
+    },
+    generationName() {
+      return this?.game?.generation.name || '';
+    },
+    regions() {
+      return this?.game?.regions[0].name;
+    },
+    pokedexes() {
+      return this?.game?.pokedexes[0].name;
+    },
+  },
+
   data() {
     return {
       game: null,
@@ -63,6 +79,7 @@ export default {
       } catch (error) {
         // eslint-disable-next-line
         alert('API error');
+        this.$router.push('/');
       }
     },
   },
