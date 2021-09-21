@@ -1,6 +1,6 @@
 <template>
   <main class="game view">
-    <loader v-show='!game'></loader>
+    <loader v-if='!game'></loader>
     <div v-show="game">
       <picture class="game__cover">
         <source srcset="@/assets/images/game-cover.jpeg">
