@@ -16,7 +16,7 @@
         >
         </game-card>
       </router-link>
-      <scroll-observer @isIntersecting='canFetchNewGames && fetchGames()'></scroll-observer>
+      <scroll-observer @isIntersecting='handleIntersection'></scroll-observer>
     </section>
   </main>
 </template>
@@ -87,6 +87,13 @@ export default {
     },
     scrollViewToTop() {
       window.scrollTo(0, 0);
+    },
+    handleIntersection() {
+      if (!this.canFetchNewGames) {
+        return;
+      }
+
+      this.fetchGames();
     },
   },
 };
