@@ -19,8 +19,12 @@
     flex-basis 100%
     padding $size.micro $size.little $size.nano
     font-size $font.small
-    line-height 18px
+    line-height $size.snug
     overflow hidden
+
+    @media screen and (min-width: $breakpoints.md)
+      font-size $font.snug
+      line-height $size.small
 
   &__title
     font-weight 400
