@@ -7,8 +7,11 @@
     margin-bottom $size.little
 
   &__details
-    max-width 640px
+    max-width 600px
     margin 0 auto
+
+    @media screen and (min-width: $breakpoints.md)
+      font-size $font.snug
 
     &__border
       position relative
@@ -24,6 +27,9 @@
         margin-bottom $size.micro
 
     &__pokemons
+      &:hover
+        cursor pointer
+
       > p
         margin-left $size.tiny
 
