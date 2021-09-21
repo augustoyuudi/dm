@@ -61,6 +61,7 @@ export default {
       try {
         this.game = await GamesAPI.fetchAllGameData(this.gameName);
       } catch (error) {
+        // eslint-disable-next-line
         alert('API error');
       }
     },
