@@ -53,6 +53,6 @@ describe('Game', () => {
   it('Should not show loader if game data is ready', () => {
     const loader = wrapper.findComponent(Loader);
 
-    expect(loader.isVisible()).toBe(false);
+    expect(loader.exists()).toBe(false);
   });
 });
