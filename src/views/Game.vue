@@ -61,7 +61,7 @@ export default {
       try {
         this.game = await GamesAPI.fetchAllGameData(this.gameName);
       } catch (error) {
-        console.error(error);
+        alert('API error');
       }
     },
   },
