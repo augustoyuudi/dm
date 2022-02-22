@@ -1,7 +1,7 @@
 <!-- PROJECT SHIELDS -->
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
-# Delivery Much Tech Challenge
+# Pokémon games list and details
 
 > Available at [delivery-much.web.app](https://delivery-much-efe6e.web.app/)
 
